@@ -1,6 +1,7 @@
 import AppLoader from './appLoader';
 import { IAppController } from '../../interface';
 import type { CallbackGetSources, CallbackGetNews } from '../../type';
+import Sort from '../view/sort/sort';
 
 class AppController extends AppLoader implements IAppController {
     getSources(callback: CallbackGetSources): void {
@@ -31,6 +32,28 @@ class AppController extends AppLoader implements IAppController {
             }
 
             if (target.parentNode) target = target.parentNode as Element;
+        }
+    }
+    getSortSources(e: Event): void {
+        const sort: Sort = new Sort();
+        const sources: HTMLElement | null = document.querySelector('.sources');
+        const sortAlphabet: HTMLElement | null = document.querySelector('.sort-alphabet');
+
+        if (sources) {
+            const allElements: Element[] = Array.from(sources.children);
+            const element: Element = e.target as Element;
+            const letter: string | null = element.textContent;
+            sort.sortSources(allElements, letter);
+        }
+        if (sortAlphabet) {
+            const allLetters = Array.from(sortAlphabet.children);
+            allLetters.forEach((item) => {
+                if (item === e.target) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
         }
     }
 }

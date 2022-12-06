@@ -24,6 +24,7 @@ export interface INewsObject {
 export interface IAppView {
     drawNews(data: { totalResults: number; articles: DataArray; status: string }): void;
     drawSources(data: { status: string; sources: DataSourceArray }): void;
+    drawSortSources(): void;
 }
 
 export interface INews {
@@ -39,5 +40,10 @@ export interface ILoader {
 export interface IAppController {
     getSources(callback: Callback): void;
     ///get News  возвращает void или void|undefined?
-    getNews(e: PointerEvent, callback: Callback): void;
+    getNews(e: PointerEvent, callback: Callback): void | undefined;
+    getSortSources(e: Event): void;
+}
+export interface ISort {
+    draw(): void;
+    sortSources(data: Array<Element>, letterSort: string | null): void;
 }

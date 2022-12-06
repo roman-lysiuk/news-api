@@ -11,6 +11,9 @@ class App {
 
     start() {
         const sources: HTMLElement | null = document.querySelector('.sources');
+        const sortAlphabet: HTMLElement | null = document.querySelector('.sort-alphabet');
+
+        this.view.drawSortSources();
 
         if (sources) {
             sources.addEventListener('click', (e) => this.controller.getNews(e, (data) => this.view.drawNews(data)));
@@ -21,6 +24,13 @@ class App {
                 return this.view.drawSources(data);
             }
         });
+
+        ///// delete setTimeout
+        if (sortAlphabet) {
+            setTimeout(() => {
+                sortAlphabet.addEventListener('click', (e) => this.controller.getSortSources(e));
+            }, 1000);
+        }
     }
 }
 

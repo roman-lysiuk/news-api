@@ -1,0 +1,28 @@
+.sort-alphabet {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.letter {
+    cursor: pointer;
+    font: 300 1.5em 'Fira Sans', sans-serif;
+    width: 25px;
+    height: 25px;
+}
+
+.letter:hover,
+.letter:focus,
+.letter.active {
+    border-color: #30c5ff;
+    color: #30c5ff;
+    box-shadow: 0 0.5em 0.5em -0.4em #30c5ff;
+    transform: translateY(-0.25em);
+}
+
+@media (max-width: 830px) {
+    .letter {
+        font: 300 1em 'Fira Sans', sans-serif;
+    }
+}
