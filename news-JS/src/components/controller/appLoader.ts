@@ -2,7 +2,7 @@ import Loader from './loader';
 
 class AppLoader extends Loader {
     constructor() {
-        super('https://newsapi-redirect-production.up.railway.ap/', {
+        super('https://newsapi-redirect-production.up.railway.app/', {
             apiKey: '616e6a593977466c8708fa288220ff38',
         });
     }
