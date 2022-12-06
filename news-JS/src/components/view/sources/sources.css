@@ -10,21 +10,22 @@
 
 .source__item {
     background: none;
+    border-radius: 6%;
     border: 2px solid #30c5ff;
     font: inherit;
     line-height: 1;
     margin: 0.5em;
     padding: 1em 2em;
-    color: #70d6ff;
+    color: white;
     transition: 0.25s;
     cursor: pointer;
 }
 
 .source__item:hover,
 .source__item:focus {
-    border-color: #3fcc59;
-    color: #69db7e;
-    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
+    border-color: #30c5ff;
+    color: #30c5ff;
+    box-shadow: 0 0.5em 0.5em -0.4em #30c5ff;
     transform: translateY(-0.25em);
 }
 
