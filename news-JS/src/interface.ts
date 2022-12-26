@@ -39,8 +39,7 @@ export interface ILoader {
 
 export interface IAppController {
     getSources(callback: Callback): void;
-    ///get News  возвращает void или void|undefined?
-    getNews(e: PointerEvent, callback: Callback): void | undefined;
+    getNews(e: PointerEvent, callback: Callback): void;
     getSortSources(e: Event): void;
 }
 export interface ISort {

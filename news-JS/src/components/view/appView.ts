@@ -5,7 +5,6 @@ import type { DataArray, DataSourceArray, DrawNewsData, DrawSourcesData } from '
 import Sort from './sort/sort';
 
 export class AppView implements IAppView {
-    ///private or protected?
     private news: News;
     private sources: Sources;
     private sort: Sort;

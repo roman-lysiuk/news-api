@@ -24,7 +24,6 @@ class News implements INews {
             const readMore: HTMLElement | null = newsClone.querySelector('.news__read-more a');
 
             if (idx % 2) newsClone.querySelector('.news__item')?.classList.add('alt');
-            //////////// Так можно? "as HTMLElement)"/////////
 
             if (metaPhoto instanceof HTMLElement) {
                 metaPhoto.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;

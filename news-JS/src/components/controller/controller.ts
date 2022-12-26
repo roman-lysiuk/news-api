@@ -7,8 +7,7 @@ class AppController extends AppLoader implements IAppController {
     getSources(callback: CallbackGetSources): void {
         super.getResp({ endpoint: 'sources' }, callback);
     }
-    ///нужен ли здесь undefined?
-    getNews(e: Event, callback: CallbackGetNews): void | undefined {
+    getNews(e: Event, callback: CallbackGetNews): void {
         let target: Element = e.target as HTMLElement;
 
         const newsContainer: HTMLElement = e.currentTarget as HTMLElement;

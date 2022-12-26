@@ -25,7 +25,6 @@ class App {
             }
         });
 
-        ///// delete setTimeout
         if (sortAlphabet) {
             setTimeout(() => {
                 sortAlphabet.addEventListener('click', (e) => this.controller.getSortSources(e));
